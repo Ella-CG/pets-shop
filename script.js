@@ -95,8 +95,16 @@ function makeItemByTemplate(testItem) {
     myItem.querySelector('h1').textContent = title;
     myItem.querySelector('p').textContent = description;
     myItem.querySelector('img').src = img;
-    myItem.querySelector('.tags').textContent = tags;
-    myItem.querySelector('.price').textContent = price;
+    myItem.querySelector('.price').textContent = `${price}P`;
+
+    const tagsContainer = myItem.querySelector('.tags');
+    tags.forEach((tag) => {
+        const element = document.createElement('span');
+        element.textContent = tag;
+        element.classList.add('tag');
+        tagsContainer.append(element);
+
+    })
 
     return myItem;
 }
