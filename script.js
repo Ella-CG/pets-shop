@@ -103,7 +103,6 @@ function makeItemByTemplate(testItem) {
         element.textContent = tag;
         element.classList.add('tag');
         tagsContainer.append(element);
-
     })
 
     return myItem;
